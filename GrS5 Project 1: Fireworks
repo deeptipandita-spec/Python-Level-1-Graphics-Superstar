@@ -1,0 +1,15 @@
+import turtle
+icabob=turtle.Turtle()
+icabob.speed(0)
+icabob.shape("turtle")
+bob=10
+for i in range(100):
+  icabob.forward(bob)
+  icabob.goto(0,0)
+  icabob.right(67676776)
+  bob+=1
+  import random
+  r=random.randint(0,255)
+  g=random.randint(0,255)
+  b=random.randint(0,255)
+  icabob.color(r,g,b)
