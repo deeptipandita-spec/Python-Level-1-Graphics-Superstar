@@ -1,0 +1,53 @@
+import turtle
+bob=turtle.Turtle()
+bob.shape("turtle")
+blob=turtle.Turtle()
+blob.shape("turtle")
+import random
+num=random.randint(0,3)
+size=random.randint(10,200)
+x=random.randint(-360,360)
+y=random.randint(-200,200)
+r=random.randint(0,255)
+b=random.randint(0,255)
+g=random.randint(0,255)
+bob.penup()
+bob.color(r,g,b)
+bob.goto(x,y)
+bob.pendown()
+bob.begin_fill()
+for i in range(4):
+  bob.forward(size)
+  bob.right(90)
+bob.end_fill()
+size=random.randint(10,200)
+x=random.randint(-360,360)
+y=random.randint(-200,200)
+r=random.randint(0,255)
+b=random.randint(0,255)
+g=random.randint(0,255)
+blob.penup()
+blob.color(r,g,b)
+blob.goto(x,y)
+blob.pendown()
+if num==0:
+  blob.begin_fill()
+  for i in range(4):
+    blob.forward(size)
+    blob.right(90)
+  blob.end_fill()
+elif num == 1:
+  for i in range(3):
+    blob.forward(size)
+    blob.right(120)
+elif num == 2:
+  for i in range(6):
+    blob.forward(size)
+    blob.right(60)
+else:
+  for i in range(36):
+    blob.forward(size)
+    blob.right(10)
+  for i in range(36):
+    bob.forward(size)
+    bob.right(10)
