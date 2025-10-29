@@ -1,0 +1,17 @@
+import turtle
+bobby=turtle.Turtle()
+bobby.shape("turtle")
+blob=turtle.Turtle()
+blob.shape("turtle")
+bob=turtle.Turtle()
+bob.shape("turtle")
+length=100
+degrees=90
+for i in range(2):
+  bob.forward(length*2)
+  bob.left(degrees)
+  blob.backward(length*2)
+  blob.right(degrees)
+  bobby.backward(length)
+  bobby.left(degrees)
+  
