@@ -1,0 +1,26 @@
+import turtle
+icabob=turtle.Turtle()
+icabob.penup()
+icabob.shape("turtle")
+import random
+x=random.randint(-255,255)
+y=random.randint(-255,255)
+icabob.goto(x,y)
+if x > 0 and y > 0:
+  icabob.color("blue")
+if x > 0 and y < 0:
+  icabob.color("yellow")
+if x < 0 and y < 0:
+  icabob.color("green")
+if x < 0 and y > 0:
+  icabob.color("orange")
+if x < 0 and y < 0:
+  icabob.pendown()
+  for i in range(36):
+    icabob.forward(10)
+    icabob.right(10)
+else:
+  for i in range(4):
+    icabob.pendown()
+    icabob.forward(100)
+    icabob.right(90)
