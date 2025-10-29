@@ -1,0 +1,14 @@
+import turtle
+t=turtle.Turtle()
+t.speed(0)
+def drawSquare(sideLength):
+  for i in range(4):
+    t.forward(sideLength)
+    t.right(90)
+def drawTriangle(sideLength):
+    for i in range(3):
+      t.forward(sideLength)
+      t.right(120)
+      
+drawSquare(100)
+drawTriangle(200)
