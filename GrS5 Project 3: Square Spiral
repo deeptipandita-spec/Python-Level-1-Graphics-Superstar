@@ -1,0 +1,5 @@
+import turtle
+import random
+bob=turtle.Turtle
+counter=0
+lineLength=10 
