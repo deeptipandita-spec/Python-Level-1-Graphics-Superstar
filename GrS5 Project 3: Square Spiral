@@ -1,5 +1,18 @@
-import turtle
-import random
-bob=turtle.Turtle
-counter=0
-lineLength=10 
+import turtle #import the turtle
+import random  #import the random
+bob=turtle.Turtle() # name your turtle
+bob.speed(0) # what is ur speed
+bob.penup() # penup
+bob.colormode(255) # colormode
+counter=0 # counter
+lineLength=10 # linelength
+while counter<50:#while counter
+  r=random.randint(0,255)
+  g=random.randint(0,255)
+  b=random.randint(0,255)
+  bob.pendown()
+  bob.color(r,g,b)
+  bob.forward(lineLength)
+  bob.right(90)
+  lineLength+=10
+  counter += 1
