@@ -1,0 +1,9 @@
+import turtle #import turtle
+bob=turtle.Turtle() #name your turtle
+side = 67#side length
+for i in range(3): #nested loop
+  for i in range(4): #loop
+    bob.forward(side)# forward by blank
+    bob.right(90)# turn by 90 ONLY
+  side += 20 #side gets bigger
+  #done
