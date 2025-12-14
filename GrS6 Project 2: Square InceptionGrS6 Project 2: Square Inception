@@ -1,0 +1,16 @@
+import turtle#choose your turtle
+t=turtle.Turtle()#Name him
+import random#Make random
+t.colormode(255)#colormode
+for i in range(4):#LOOP
+  sidelength=30#SIDELENGTH
+  r=random.randint(0,255)#R
+  g=random.randint(0,255)#G
+  b=random.randint(0,255)#b
+  t.color(r,g,b)
+  for i in range(3):
+    for i in range(4):
+      t.forward(sidelength)
+      t.right(90)
+    sidelength += 20
+  t.right(90)#degrees
