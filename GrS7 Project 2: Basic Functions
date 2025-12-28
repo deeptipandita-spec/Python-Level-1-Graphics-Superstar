@@ -1,0 +1,29 @@
+import turtle # bring your turtle
+import random # random
+bob=turtle.Turtle() # name him
+bob.colormode(255) #RGB
+bob.speed(3) #speed
+def randomSpot():
+  x = random.randint(-200,200)
+  y = random.randint(-200,200)
+  bob.penup() #penup
+  bob.goto(x,y)#move
+  bob.pendown()#pendown
+randomSpot()#random
+def randomColor():#Random
+  r = random.randint(0,255)#R
+  g = random.randint(0,255)#G
+  b = random.randint(0,255)#B
+  bob.color(r,g,b)#RGB
+randomColor()#random.randint
+def reset():#reset name
+  bob.penup()#do not draw
+  bob.goto(0,0)
+  bob.clear()#delete
+  bob.color("black")#color
+  bob.setheading(0)#setheading
+reset()#reset
+def allRandom():#define
+  randomColor()#color
+  randomSpot()
+allRandom()#call it
