@@ -1,0 +1,24 @@
+# Explain what a function is:
+# a nickname for a certain number of steps
+# What are the two parts of a function? What do they each do?
+# the body and the defination
+# Define a function that draws a square with a side length of 50
+import turtle
+bob=turtle.Turtle()
+def a():
+  for i in range(4):
+    bob.forward(50)
+    bob.right(90)
+
+# Call your function
+a()
+
+# Call your function 2 more times in different locations
+bob.penup()
+bob.goto(67,67)
+bob.pendown()
+a()
+bob.penup()
+bob.goto(100,-100)
+bob.pendown()
+a()
