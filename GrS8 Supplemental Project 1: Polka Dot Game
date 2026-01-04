@@ -1,0 +1,35 @@
+import turtle
+import random
+bob=turtle.Turtle()
+bob.penup()
+screen=turtle.Screen()
+bob.colormode(255)
+bob.speed(0)
+def upArrow():
+  bob.forward(20)
+def downArrow():
+  bob.backward(20)
+def rightArrow():
+  bob.right(45)
+def leftArrow():
+  bob.left(45)
+def Space():
+  bob.begin_fill()
+  r=random.randint(0,255)
+  g=random.randint(0,255)
+  b=random.randint(0,255)
+  bob.color(r,g,b)
+  size=random.randint(1,10)
+  for i in range(36):
+    bob.forward(size)
+    bob.right(10)
+  bob.end_fill()
+upArrow()
+Space()
+downArrow()
+screen.listen()
+screen.onkey(upArrow,"up")
+screen.onkey(downArrow,"down")
+screen.onkey(rightArrow,"right")
+screen.onkey(leftArrow,"left")
+screen.onkey(Space,"space")
