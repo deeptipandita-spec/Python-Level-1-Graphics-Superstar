@@ -1,0 +1,18 @@
+import turtle
+bob=turtle.Turtle()
+screen=turtle.Screen()
+bob.colormode(255)
+def rightArrow():
+  for i in range(4):
+    bob.forward(20)
+    bob.right(90)
+def leftArrow():
+  for i in range(3):
+    bob.forward(30)
+    bob.right(120)
+def upArrow():
+  bob.clear()
+screen.onkey(rightArrow,"Right")
+screen.onkey(leftArrow,"Left")
+screen.onkey(upArrow,"Up")
+screen.listen()
