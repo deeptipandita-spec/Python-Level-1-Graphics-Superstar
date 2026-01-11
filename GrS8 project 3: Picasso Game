@@ -1,0 +1,30 @@
+import turtle
+import random
+bob=turtle.Turtle()
+bob.colormode(255)
+bob.penup()
+bob.goto(0,0)
+bob.pendown()
+screen=turtle.Screen()
+def color():
+  r=random.randint(0,255)
+  g=random.randint(0,255)
+  b=random.randint(0,255)
+  bob.color(r,g,b)
+def location():
+  bob.penup()
+  x = random.randint(-300,300)
+  y = random.randint(-300,300)
+  bob.goto(x,y)
+  bob.pendown()
+def drawSquare():
+  color()
+  location()
+  j = random.randint(20,100)
+  bob.begin_fill()
+  for i in range(4):
+    bob.forward(j)
+    bob.right(90)
+  bob.end_fill()
+screen.onkey(drawSquare,"up")
+screen.listen()
