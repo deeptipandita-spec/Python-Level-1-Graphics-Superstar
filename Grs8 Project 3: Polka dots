@@ -2,7 +2,9 @@ import turtle
 import random
 t=turtle.Turtle()
 screen=turtle.Screen()
-t.speed(10)
+t.speed(0)
+t.colormode(255)
+t.goto(0,0)
 def Circle():
   t.begin_fill()
   r=random.randint(0,255)
@@ -18,5 +20,5 @@ def apple(x,y):
   t.penup()
   t.goto(x,y)
   t.pendown()
-  drawCircle()
+  Circle()
 screen.onclick(apple)
