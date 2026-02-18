@@ -1,0 +1,20 @@
+import turtle
+import random
+screen = turtle.Screen()
+bob = turtle.Turtle()
+bob.colormode(255)
+def drawRectangle(x,y):
+  r=random.randint(0,255)
+  g=random.randint(0,255)
+  b=random.randint(0,255)
+  bob.color(r,g,b)
+  for i in range(2):
+    bob.begin_fill()
+    bob.forward(200)
+    bob.right(90)
+    bob.forward(100)
+    bob.right(90)
+    bob.end_fill()
+#drawRectangle(6,7)
+screen.listen()
+screen.onclick(drawRectangle)
