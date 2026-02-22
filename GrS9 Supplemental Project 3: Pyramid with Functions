@@ -1,0 +1,15 @@
+import turtle
+t=turtle.Turtle()
+sideLength=16
+t.speed(0)
+def Triangle(sideLength):
+  for i in range(3):
+    t.left(120)
+    t.forward(sideLength)
+for i in range(50):
+  t.penup()
+  t.goto(0,250)
+  t.pendown()
+  t.setheading(1200)
+  Triangle(sideLength)
+  sideLength += 10
