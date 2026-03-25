@@ -1,0 +1,21 @@
+import turtle
+import random
+bob = turtle.Turtle()
+bob.colormode(255)
+bob.speed(0)
+screen = turtle.Screen()
+screen.bgcolor("black")
+r = random.randint(0,255)
+g = random.randint(0,255)
+b=0
+bobbylength = 10
+for i in range(40):
+  bob.color(r,g,b)
+  b += 5
+  bob.begin_fill()
+  for i in range(4):
+    bob.forward(bobbylength)
+    bob.right(90)
+  bob.end_fill()
+  bobbylength += 10
+  bob.right(10)
