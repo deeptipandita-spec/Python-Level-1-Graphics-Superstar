@@ -1,0 +1,32 @@
+import turtle
+import random
+bob = turtle.Turtle()
+def drawSnowflake(numBranches, branchLength, sideBranchLength):
+  bob.colormode(255)
+  bob.speed(100000000000000000000000000)
+  x = random.randint(-200,200)
+  y = random.randint(-200,200)
+  r=random.randint(0,255)
+  g=random.randint(0,255)
+  b=random.randint(0,255)
+  bob.color(r,g,b)
+  for i in range(numBranches):
+    bob.penup()
+    bob.goto(x,y)
+    bob.pendown()
+    for i in range(10):
+      bob.forward(branchLength/10)
+      bob.right(45)
+      bob.forward(sideBranchLength)
+      bob.backward(sideBranchLength)
+      bob.left(90)
+      bob.forward(sideBranchLength)
+      bob.backward(sideBranchLength)
+      bob.right(45)
+    bob.left(360/numBranches)
+  bob.penup
+for i in range(10):
+  numBranches=random.randint(5,20)
+  branchLength=random.randint(20,80)
+  sideBranchLength=random.randint(5,20)
+  drawSnowflake(numBranches,branchLength,sideBranchLength)
