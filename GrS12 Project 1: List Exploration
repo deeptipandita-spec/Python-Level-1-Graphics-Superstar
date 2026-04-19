@@ -1,0 +1,12 @@
+import turtle
+bob=turtle.Turtle()
+colors=["green","blue","red"]
+colors.append("purple")
+colors.append("brown")
+for color in colors:
+  bob.forward(10)
+  bob.color(color)
+if "purple" in colors:
+  bob.write("yes")
+else:
+  bob.write("no")
