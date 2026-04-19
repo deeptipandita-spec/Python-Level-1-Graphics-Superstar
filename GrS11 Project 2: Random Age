@@ -1,0 +1,25 @@
+import turtle
+import random
+bob=turtle.Turtle("turtle")
+blob=turtle.Turtle()
+age=random.randint(0,150)
+if age<2:
+  blob.write("I am a baby",font=("Arial",23,"bold"))
+elif age<5:
+  blob.write("I am a toddler",font=("Arial",23,"bold"))
+elif age<7:
+  blob.write("I am a kiddie",font=("Arial",23,"bold"))
+elif age<12:
+  blob.write("I am a preteen",font=("Arial",23,"bold"))
+elif age<19:
+  blob.write("I am a teen",font=("Arial",23,"bold"))
+elif age <40:
+  blob.write("I am a adult",font=("Arial",23,"bold"))
+elif age <70:
+  blob.write("I am old",font=("Arial",23,"bold"))
+elif age <100:
+  blob.write("I am a unc",font=("Arial",23,"bold"))
+elif age <130:
+  blob.write("I am a dinosaur",font=("Arial",23,"bold"))
+elif age <150:
+  blob.write("I am a dinosaurs grandpa",font=("Arial",23,"bold"))
