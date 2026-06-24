@@ -1,0 +1,21 @@
+import turtle
+import random
+bob=turtle.Turtle()
+bob.penup()
+bob.goto(-400,0)
+kobe=[]
+for i in range(15):
+ kobe.append(random.randint(0,10))
+for mj in kobe:
+ bob.write(mj,font=("Akedopikuseru",30,"normal"))
+ bob.forward(50)
+bob.goto(-400,-50)
+for lebron in kobe:
+ bob.write(lebron + 10,font=("Akedopikuseru",30,"normal"))
+ bob.forward(50)
+bob.goto(-400,-100)
+for curry in kobe:
+ bob.write(curry * 10, font =("Akedopikuseru",30,"normal"))
+ bob.forward(50)
+
+
