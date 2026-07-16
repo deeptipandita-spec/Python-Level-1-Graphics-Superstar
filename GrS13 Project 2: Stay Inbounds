@@ -1,0 +1,41 @@
+import turtle
+screen=turtle.Screen()
+t = turtle.Turtle()
+bob = turtle.Turtle()
+blob = turtle.Turtle()
+t.speed(0)
+bob.speed(0)
+blob.speed(0)
+bob.penup()
+bob.goto(-300,350)
+bob.pendown
+bob.write("Score=0",font=("Akedopikuseru",30,"normal"))
+blob.color("red")
+blob.penup()
+blob.goto(-300,300)
+blob.pendown()
+for i in range(4):
+  blob.forward(600)
+  blob.right(90)
+t.speed(0)
+def turnLeft():
+  t.left(5)
+def turnRight():
+  t.right(5)
+screen.onkey(turnLeft,"left")
+screen.onkey(turnRight,"Right")
+screen.listen()
+score=0
+bob.clear()
+while True:
+  t.forward(5)
+  if t.xcor()> 300 or t.xcor()<-300:
+    t.write("Out of bounds!",font=("Akedopikuseru",30,"normal"))
+    break
+  if t.ycor()>300 or t.ycor()<-300:
+    t.write("Out of bounds!",font=("Akedopikuseru",30,"normal"))
+    break
+  else:
+    score += 1
+    bob.clear()
+    bob.write("Score = " + str(score),font=("Akedopikuseru",30,"normal"))
