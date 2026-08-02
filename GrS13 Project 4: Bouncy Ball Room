@@ -1,0 +1,29 @@
+import turtle
+import random
+bob=turtle.Turtle()
+bob.speed(0)
+bob.penup()
+bob.goto(-300,300)
+bob.pendown()
+for i in range(4):
+  bob.forward(500)
+  bob.right(90)
+turtles = []
+for i in range(10):
+  lightbulb = turtle.Turtle()
+  lightbulb.speed(0)
+  lightbulb.color("red")
+  lightbulb.shape("circle")
+  turtles.append(lightbulb)
+  lightbulb.penup()
+  lightbulb.left(random.randint(0,360))
+  lightbulb.goto(random.randint(-300,200),random.randint(-200,300))
+def walls(box):
+  if box.xcor()> 200 or box.xcor()<-300:
+    box.right(180)
+  if box.ycor()> 300 or box.ycor()<-200:
+    box.right(180)
+while True:
+  for box in turtles:
+    box.forward(10)
+    walls(box)
