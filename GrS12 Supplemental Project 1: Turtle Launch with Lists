@@ -1,0 +1,45 @@
+import turtle
+import random
+t=turtle.Turtle()
+screen=turtle.Screen()
+t.speed(0)
+t.color("white")
+screen.bgcolor("black")
+def drawEarth():
+  t.penup()
+  t.goto(-200,0)
+  t.color("deep sky blue")
+  t.begin_fill()
+  t.pendown()
+  for i in range(36):
+    t.forward(20)
+    t.right(10)
+  t.end_fill()
+
+def drawMoon():
+  t.penup()
+  t.goto(200,-25)
+  t.color("light slate gray")
+  t.begin_fill()
+  t.pendown()
+  for i in range(36):
+    t.forward(13)
+    t.right(10)
+  t.end_fill()
+
+def turtleRocket():
+  p=turtle.Turtle()
+  p.penup()
+  p.goto(-200,-50)
+  p.color("red")
+  p.shape("turtle")
+  distance=random.randint(200,500)
+  p.forward(distance)
+  if distance >= 400:
+    p.color("white")
+
+
+drawEarth()
+drawMoon()
+screen.onkey(turtleRocket,"space")
+screen.listen()
